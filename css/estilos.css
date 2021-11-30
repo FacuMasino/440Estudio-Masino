@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto+Slab:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* HEADER MENU */
+
+#header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #000;
+}
+
+.logo{
+    color: #fff;
+}
+
+.menu{
+    margin-left: auto;
+}
+
+.menu ul{
+    list-style-type: none;
+    margin: 30px 0px 30px 0px;
+}
+
+.menu ul li{
+    display: inline-block;
+    height: 100%;
+    margin: 0px 10px 0px 0px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* 
+     Estructura general con GRID
+*/
+
+#gridLayout{
+    display: grid;
+    grid-template-areas:
+    "areaHeroImg"
+    "areaContenido"
+    "areaFooter";
+    grid-template-columns: 3fr;
+    grid-template-rows: 100vh; /* 100vh solo para heroImg */
+}
+
+.heroImg{
+    grid-area: areaHeroImg;
+    background-image: url('../assets/img/heroimage.jpg');
+    background-size: cover;
+}
+
+.heroTitulo{ /* Oscurece la imagen y resalta el texto */
+    background-color: rgb(0,0,0,0.4);
+}
+
+.heroTitulo p{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 100vh;
+    text-align: center;
+    color: #fff;
+}
+
+.contenido{
+    grid-area: areaContenido;
+    background-color: #fff;
+    padding: 1.5rem;
+    height: 100%;
+    box-sizing: border-box;
+    /* Fuente general */
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #000;
+}
+
+.footer{
+    grid-area: areaFooter;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estructura interior con FLEXBOX */
+
+/* HOME */
+
+.flexServicios{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+.servicios__card{
+    margin: 0.5rem;
+    height: 100%;
+    width: 20%;
+    border-radius: 6px;
+    box-shadow: 7px 4px 10px 0px rgb(0,0,0,0.28);
+    background-color: white;
+}
+
+.servicios__cardImage{
+    height: 60%;
+}
+
+.servicios__cardImage img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 6px 6px 0 0;
+}
+
+.servicios__cardInfo{
+    padding: .5rem;
+    text-align: center;
+}
+
+.clientes p{
+    text-align: center;
+    margin: .5rem;
+}
+
+.flexClientes{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.clientes__album{
+    padding: 2px;
+    text-align: center;
+}
+
+.clientes__album img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+/* SERVICIOS */
+
+.serviciosPage{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.serviciosPage__card{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    width: 80%;
+    margin: 1rem;
+    background-color: white;
+}
+
+.serviciosPage__cardImage{
+    width: 35%;
+    height: 100%;
+}
+
+.serviciosPage__cardImage img{
+    display: block;
+    height: 200px;
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.serviciosPage__info{
+    padding-left: 1rem;
+    width: 65%;
+    box-sizing: border-box;
+}
+
+.precios{
+    margin: auto;
+    text-align: center;
+}
+
+.precios table{
+    margin: auto;
+}
+
+.precios table thead{
+    background: #000;
+    color: #fff;
+}
+
+/* FOOTER */
+
+.flexFooter{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+}
+
+.footer__social{
+    margin-left: 1.5rem;
+    margin-right: auto;
+}
+
+.footer_social ul {
+    list-style-type: none;
+}
+
+.footer__social li {
+    display: inline-block;
+    padding: .5rem;
+}
+
+.footer__social--ig {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/img/ig.png);
+    background-size: cover;
+}
+
+.footer__social--fb {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/img/fb.png);
+    background-size: cover;
+}
+
+.footer__social--yt {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/img/yt.png);
+    background-size: cover;
+}
+
+/* FUENTES */
+
+
+.t1{
+    font-size: 3rem;
+}
+
+.t2{
+    font-size: 2.5rem;
+}
+
+.t3{
+    font-size: 2rem;
+}
+
+.t4{
+    font-size: 1.5rem;
+}
+
+.textTitle{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: #000;
+}
+
+.textSubtitle{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+@media screen and (max-width: 480px) {
+
+    #header{
+        flex-direction: column;
+        align-items: center;
+    }    
+
+    .heroTitulo{
+        text-align: justify;
+    }
+
+    .logo{
+        margin-bottom: 30px;
+    }
+
+    .menu{
+        margin: auto;
+        width: 100%;
+    }
+    
+    .menu ul{
+        margin: 0 0 30px 0;
+        width: 100%;
+        border-bottom: solid 1px #fff;
+        box-sizing: border-box;
+    }
+    
+    .menu ul li{
+        display: block;
+        margin: 0px;
+        text-align: center;
+        border-top: solid 1px #fff;
+    }
+    
+    .menu ul li a{
+        text-decoration: none;
+        line-height: 30px;
+        font-size: 1rem;
+    }
+
+    .contenido{
+        height: max-content;
+    }
+
+    .flexServicios{
+        height: 100%;
+        flex-flow: column;
+    }
+
+    .servicios__card{
+        width: 100%;
+    }
+
+    .serviciosPage__card{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .serviciosPage__cardImage{
+        width: 70%;
+    }
+
+    .serviciosPage__cardImage img{
+        display: inline-block;
+        border-radius: 6px;
+    }
+
+    .serviciosPage__info{
+        padding: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .footer__social{
+        margin-left: .5rem;
+    }
+
+    .footer__social--ig{
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer__social--fb{
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer__social--yt{
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer__mapa{
+        margin-right: .5rem;
+    }
+
+    .footer__mapa iframe{
+        display: none;
+    }
+
+    /* Tamaños de fuente para mobile */
+
+    .t1{
+        font-size: 2rem;
+    }
+    
+    .t2{
+        font-size: 1.5rem;
+    }
+    
+    .t3{
+        font-size: 1.2rem;
+    }
+    
+    .t4{
+        font-size: 1rem;
+    }
+
+}
