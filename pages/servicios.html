@@ -5,6 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<link
+    rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  	/>
 </head>
 <body>
 	<header id="header">
@@ -15,7 +19,7 @@
 		<nav class="menu">
 			<ul>
 				<li><a href="../index.html">Home</a></li>
-				<li><a href="#">Servicios</a></li>
+				<li><div class="activeLinkBar"></div><a href="#">Servicios</a></li>
 				<li><a href="#">Equipos</a></li>
 				<li><a href="#">Mastering Gratis</a></li>
 				<li><a href="#">Contacto</a></li>
@@ -25,15 +29,15 @@
 	<div id="gridLayout">
 		<div class="heroImg">
 			<!-- atenuar fondo para resaltar texto -->
-			<div class="heroTitulo">
-				<p class="textTitle t1">Nuestros Servicios</p>
+			<div class="animate__animated animate__fadeIn heroTitulo">
+				<p class="animate__animated animate__fadeIn textTitle t1">Nuestros Servicios</p>
 			</div>
 		</div>
 		<div class="contenido">
 			<div id="linkGraba" class="serviciosPage">
 				<div class="serviciosPage__card">
 					<!-- insertar imagen de servicio -->
-					<div class="serviciosPage__cardImage">
+					<div class="wow animate__animated animate__fadeInLeft serviciosPage__cardImage" data-wow-duration="1.5s" data-wow-delay="0.2s">
 						<img src="../assets/img/grabacion.jpg">
 					</div>
 					<div class="serviciosPage__info">
@@ -47,7 +51,7 @@
 				</div>
 				<div id="linkProd" class="serviciosPage__card">
 					<!-- insertar imagen de servicio -->
-					<div class="serviciosPage__cardImage">
+					<div class="wow animate__animated animate__fadeInLeft serviciosPage__cardImage" data-wow-duration="1.5s" data-wow-delay="0.2s">
 						<img src="../assets/img/prod.jpg">
 					</div>
 					<div class="serviciosPage__info">
@@ -61,7 +65,7 @@
 				</div>
 				<div id="linkMix" class="serviciosPage__card">
 					<!-- insertar imagen de servicio -->
-					<div class="serviciosPage__cardImage">
+					<div class="wow animate__animated animate__fadeInLeft serviciosPage__cardImage" data-wow-duration="1.5s" data-wow-delay="0.2s">
 						<img src="../assets/img/mezcla.jpg">
 					</div>
 					<div class="serviciosPage__info">
@@ -75,7 +79,7 @@
 				</div>
 				<div id="linkMaster" class="serviciosPage__card">
 					<!-- insertar imagen de servicio -->
-					<div class="serviciosPage__cardImage">
+					<div class="wow animate__animated animate__fadeInLeft serviciosPage__cardImage" data-wow-duration="1.5s" data-wow-delay="0.2s">
 						<img src="../assets/img/mastering.png">
 					</div>
 					<div class="serviciosPage__info">
@@ -147,5 +151,9 @@
 			</div>
 		</div>
 	</div>
+	<script src="../js/wow.min.js"></script>
+	<script>
+	new WOW().init();
+	</script>
 </body>
 </html>

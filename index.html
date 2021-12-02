@@ -5,6 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link
+    rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  	/>
 </head>
 <body>
 	<header id="header">
@@ -14,7 +18,7 @@
 		</div>
 		<nav class="menu">
 			<ul>
-				<li><a href="#">Home</a></li>
+				<li><div class="activeLinkBar"></div><a href="#">Home</a></li>
 				<li><a href="pages/servicios.html">Servicios</a></li>
 				<li><a href="#">Equipos</a></li>
 				<li><a href="#">Mastering Gratis</a></li>
@@ -25,8 +29,8 @@
 	<div id="gridLayout">
 		<div class="heroImg">
 			<!-- atenuar fondo para resaltar texto -->
-			<div class="heroTitulo">
-				<p class="textTitle t1">Estudio de grabación y producción musical</p>
+			<div class="animate__animated animate__fadeIn heroTitulo">
+				<p class="animate__animated animate__fadeIn textTitle t1">Estudio de grabación y producción musical</p>
 			</div>
 		</div>
 		<div class="contenido">
@@ -73,23 +77,23 @@
 				<!-- Slide con fotos de albumes -->
 				<p class="textSubtitle t4">Nuestros clientes</p>
 				<div class="flexClientes">
-					<div class="clientes__album">
+					<div class="wow animate__animated animate__fadeIn clientes__album">
 						<!-- insertar imagen album -->
 						<img src="assets/img/album1.jpg" alt="album 1">
 					</div>
-					<div class="clientes__album">
+					<div class="wow animate__animated animate__fadeIn clientes__album" data-wow-duration="2.5s" data-wow-delay="0.2s">
 						<!-- insertar imagen album -->
 						<img src="assets/img/album2.jpg" alt="album 2">
 					</div>
-					<div class="clientes__album">
+					<div class="wow animate__animated animate__fadeIn clientes__album" data-wow-duration="2.5s" data-wow-delay="0.4s">
 						<!-- insertar imagen album -->
 						<img src="assets/img/album3.jpg" alt="album 3">
 					</div>
-					<div class="clientes__album">
+					<div class="wow animate__animated animate__fadeIn clientes__album" data-wow-duration="2.5s" data-wow-delay="0.6s">
 						<!-- insertar imagen album -->
 						<img src="assets/img/album4.jpg" alt="album 4">
 					</div>
-					<div class="clientes__album">
+					<div class="wow animate__animated animate__fadeIn clientes__album" data-wow-duration="2.5s" data-wow-delay="0.8s">
 						<!-- insertar imagen album -->
 						<img src="assets/img/album5.jpg" alt="album 5">
 					</div>
@@ -117,5 +121,9 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/wow.min.js"></script>
+	<script>
+	new WOW().init();
+	</script>
 </body>
 </html>
