@@ -1,129 +1,167 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title>440 Estudio - Home</title>
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<link
-    rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  	/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+	<title>440 Estudio - Home</title>
 </head>
 <body>
-	<header id="header">
-		<div class="logo">
-			<!-- insertar imagen logo -->
-			<span>LOGO</span>
-		</div>
-		<nav class="menu">
-			<ul>
-				<li><div class="activeLinkBar"></div><a href="#">Home</a></li>
-				<li><a href="pages/servicios.html">Servicios</a></li>
-				<li><a href="#">Equipos</a></li>
-				<li><a href="#">Mastering Gratis</a></li>
-				<li><a href="#">Contacto</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div id="gridLayout">
-		<div class="heroImg">
-			<!-- atenuar fondo para resaltar texto -->
-			<div class="animate__animated animate__fadeIn heroTitulo">
-				<p class="animate__animated animate__fadeIn textTitle t1">Estudio de grabación y producción musical</p>
+	<nav id="navMenu" class="navbar navbar-expand-lg navbar-dark bg-black text-uppercase fs-4">
+		<div class="container-fluid">
+			<a class="navbar-brand me-auto text-white" href="#">LOGO</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/pages/servicios.html">Servicios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/pages/equipos.html">Equipos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/pages/mastering_gratis.html">Mastering Gratis</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/pages/contacto.html">Contacto</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-		<div class="contenido">
-			<div class="flexServicios">
-				<div class="servicios__card">
-					<div class="servicios__cardImage">
-						<img src="assets/img/grabacion.jpg">
-					</div>
-					<div class="servicios__cardInfo">
-						<p class="textSubtitle t4">Grabación</p>
-						<!-- Botón +info  -->
-						<a href="pages/servicios.html#linkGraba">+info</a>
-					</div>
-				</div>
-				<div class="servicios__card">
-					<div class="servicios__cardImage">
-						<img src="assets/img/prod.jpg">
-					</div>
-					<div class="servicios__cardInfo">
-						<p class="textSubtitle t4">Producción</p>
-						<a href="pages/servicios.html#linkProd">+info</a>
-					</div>
-				</div>
-				<div class="servicios__card">
-					<div class="servicios__cardImage">
-						<img src="assets/img/mezcla.jpg">
-					</div>
-					<div class="servicios__cardInfo">
-						<p class="textSubtitle t4">Mezcla</p>
-						<a href="pages/servicios.html#linkMix">+info</a>
+	</nav>
+
+	<div id="heroImg" class="container-fluid p-0">
+		<div class="container-fluid p-0 h-100 heroTitulo">
+			<p class="text-white d-flex justify-content-center h-100 align-items-center text-center h1 text-uppercase">Estudio de grabación y producción musical</p>
+		</div>
+	</div>
+	
+	<div id="contenido" class="container-fluid p-0">
+		<div class="container-fluid p-5">
+			<div class="row row-cols-1 row-cols-md-4 g-3">
+				<div class="col">
+					<div class="shadow card rounded-3 rounded-top h-100">
+						<img class="card-img-top" src="assets/img/grabacion.jpg" alt="grabación">
+						<div class="card-body text-center">
+							<h5 class="card-title">Grabación</h5>
+							<p class="card-text">Grabá con nosotros y soná como los profesionales</p>
+						</div>
+						<div class="card-footer pb-3 border-0 bg-transparent text-center">
+							<a href="/pages/servicios.html#linkGraba" class="btn btn-secondary">+ INFO</a>
+						</div>
 					</div>
 				</div>
-				<div class="servicios__card">
-					<div class="servicios__cardImage">
-						<img src="assets/img/mastering.png">
+				<div class="col">
+					<div class="shadow card rounded-3 rounded-top h-100">
+						<img class="card-img-top" src="assets/img/prod.jpg" alt="grabación">
+						<div class="card-body text-center">
+							<h5 class="card-title">Producción</h5>
+							<p class="card-text">Ofrecemos una producción del más alto nivel, adaptada a tu canción</p>
+						</div>
+						<div class="card-footer pb-3 border-0 bg-transparent text-center">
+							<a href="/pages/servicios.html#linkProd" class="btn btn-secondary">+ INFO</a>
+						</div>
 					</div>
-					<div class="servicios__cardInfo">
-						<p class="textSubtitle t4">Mastering</p>
-						<a href="pages/servicios.html#linkMaster">+info</a>
-					</div>							
 				</div>
-			</div>
-			<div class="clientes">
-				<!-- Slide con fotos de albumes -->
-				<p class="textSubtitle t4">Nuestros clientes</p>
-				<div class="flexClientes">
-					<div class="wow animate__animated animate__fadeIn clientes__album">
-						<!-- insertar imagen album -->
-						<img src="assets/img/album1.jpg" alt="album 1">
+				<div class="col">
+					<div class="shadow card rounded-3 rounded-top h-100">
+						<img class="card-img-top" src="assets/img/mezcla.jpg" alt="grabación">
+						<div class="card-body text-center">
+							<h5 class="card-title">Mezcla</h5>
+							<p class="card-text">Conseguí un sonido actual y competitivo</p>
+						</div>
+						<div class="card-footer pb-3 border-0 bg-transparent text-center">
+							<a href="/pages/servicios.html#linkMix" class="btn btn-secondary">+ INFO</a>
+						</div>
 					</div>
-					<div class="wow animate__animated animate__fadeIn clientes__album" data-wow-duration="2.5s" data-wow-delay="0.2s">
-						<!-- insertar imagen album -->
-						<img src="assets/img/album2.jpg" alt="album 2">
-					</div>
-					<div class="wow animate__animated animate__fadeIn clientes__album" data-wow-duration="2.5s" data-wow-delay="0.4s">
-						<!-- insertar imagen album -->
-						<img src="assets/img/album3.jpg" alt="album 3">
-					</div>
-					<div class="wow animate__animated animate__fadeIn clientes__album" data-wow-duration="2.5s" data-wow-delay="0.6s">
-						<!-- insertar imagen album -->
-						<img src="assets/img/album4.jpg" alt="album 4">
-					</div>
-					<div class="wow animate__animated animate__fadeIn clientes__album" data-wow-duration="2.5s" data-wow-delay="0.8s">
-						<!-- insertar imagen album -->
-						<img src="assets/img/album5.jpg" alt="album 5">
+				</div>
+				<div class="col">
+					<div class="shadow card rounded-3 rounded-top h-100">
+						<img class="card-img-top" src="assets/img/mastering.png" alt="grabación">
+						<div class="card-body text-center">
+							<h5 class="card-title">Mastering</h5>
+							<p class="card-text">Preparamos tu canción para el éxito y que suene bien en todos lados</p>
+						</div>
+						<div class="card-footer pb-3 border-0 bg-transparent text-center">
+							<a href="/pages/servicios.html#linkMaster" class="btn btn-secondary">+ INFO</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<div class="flexFooter">
-				<!-- iconos redes centrados a la izquierda -->
-				<div class="footer__social">
-					<ul>
-						<!-- icono instagram -->
-						<li><a href="#" target="_blank"><span class="footer__social--ig"></span></a></li>
-						<!-- icono Facebook -->
-						<li><a href="#" target="_blank"><span class="footer__social--fb"></span></a></li>
-						<!-- icono YouTube -->
-						<li><a href="#" target="_blank"><span class="footer__social--yt"></span></a></li>								
-					</ul>
-				</div>
-				<!-- google maps chico a la izquierda -->
-				<div class="footer__mapa">
-					<span>Av. Entre Ríos, C1033 CABA</span>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.776181148702!2d-58.39479478427821!3d-34.60982078045801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac2cd859503%3A0x75cdafaaef2b946!2sCongreso%20de%20la%20Naci%C3%B3n%20Argentina!5e0!3m2!1ses-419!2sar!4v1636149999049!5m2!1ses-419!2sar" width="400" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+		<div class="container-fluid mt-3 mb-3 mt-md-5 mb-md-5">
+			<p class="h4 text-center pb-3 pb-md-5">Nuestros Clientes</p>
+			<div id="carouselClientes" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="d-flex justify-content-evenly">
+							<img src="/assets/img/album1.jpg" class="d-inline-block w-20 w-sm-30" alt="...">
+							<img src="/assets/img/album2.jpg" class="d-inline-block w-20 w-sm-30" alt="...">
+							<img src="/assets/img/album3.jpg" class="d-inline-block w-20 w-sm-30" alt="...">
+							<img src="/assets/img/album5.jpg" class="d-none d-md-inline-block w-20 d-none" alt="...">
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="d-flex justify-content-evenly">
+							<img src="/assets/img/album1.jpg" class="d-inline-block w-20 w-sm-30" alt="...">
+							<img src="/assets/img/album2.jpg" class="d-inline-block w-20 w-sm-30" alt="...">
+							<img src="/assets/img/album4.jpg" class="d-inline-block w-20 w-sm-30" alt="...">
+							<img src="/assets/img/album3.jpg" class="d-none d-md-inline-block w-20" alt="...">
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="d-flex justify-content-evenly">
+							<img src="/assets/img/album4.jpg" class="d-inline-block w-20 w-sm-30" alt="...">
+							<img src="/assets/img/album5.jpg" class="d-inline-block w-20 w-sm-30" alt="...">
+							<img src="/assets/img/album3.jpg" class="d-inline-block w-20 w-sm-30" alt="...">
+							<img src="/assets/img/album1.jpg" class="d-none d-md-inline-block w-20" alt="...">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/wow.min.js"></script>
-	<script>
-	new WOW().init();
-	</script>
+
+	<div class="container-fluid p-0">
+		<div class="d-flex flex-wrap bg-black text-white align-items-center text-center">
+			<div class="col-12 col-md-3">
+				<div class="container w-75 p-0">
+					<ul class="nav flex-nowrap justify-content-around">
+						<li class="nav-item p-2">
+							<a class="footerSocial-ig" href="#"></a>
+						</li>
+						<li class="nav-item p-2">
+							<a class="footerSocial-fb" href="#"></a>
+						</li>
+						<li class="nav-item p-2">
+							<a class="footerSocial-yt" href="#"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="order-4 order-md-2 col-12 col-md-6">
+				<span>Copyright © 2021 - 440 Estudio</span>
+			</div>
+			<div class="order-2 order-md-3 col-12 col-md-1">
+				<span>Av. Entre Ríos, C1033 CABA</span>
+			</div>
+			<div class="order-3 order-md-4 col-12 col-md-2">
+				<div class="d-flex align-items-stretch">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.776181148702!2d-58.39479478427821!3d-34.60982078045801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac2cd859503%3A0x75cdafaaef2b946!2sCongreso%20de%20la%20Naci%C3%B3n%20Argentina!5e0!3m2!1ses-419!2sar!4v1636149999049!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
