@@ -1,0 +1,88 @@
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
+#navMenu{
+	min-height: 80px;
+	@media all and (max-width: $point-sm){
+		min-height: 60px;
+	}
+}
+
+.navbar-brand img{
+	height: 54px;
+	padding-left: 0.5rem;
+	background-size: cover;
+}
+
+#heroImg{
+	background-image: url($urlImages+'heroimage_compressed.jpg');
+	background-size: cover;
+	height: 100vh;
+}
+
+.heroTitulo{ /* Oscurece la imagen y resalta el texto */
+	background: radial-gradient(circle farthest-side at center center, rgba(0,0,0,0.5) 45%, rgba(0,255,0,0) 100%);
+	animation-duration: 2s;
+}
+
+.bg-black{
+	background: #000;
+}
+
+#servicios{
+	.col{
+		transition: transform 0.3s ease-in-out;
+		&:hover{
+			transform: scale(1.05);
+		}
+	}
+}
+
+.w-20{
+	width: 20%;
+}
+
+@media all and (max-width: $point-sm){
+	.w-sm-30{
+		width: 30%;
+	}
+}
+
+.ObjFit-Cover{
+	object-fit: cover;
+}
+
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	&-dark{
+		background-color: rgba(0,0,0,0.5);
+	}
+}
+
+.footerSocial{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	&-ig{
+		background-image: url($urlImages+'ig.png');
+		&:hover{
+			background-image: url($urlImages+'ig_color.png');
+		}
+	}
+	&-fb{
+		background-image: url($urlImages+'fb.png');
+		&:hover{
+			background-image: url($urlImages+'fb_color.png');
+		}
+	}
+	&-yt{
+		background-image: url($urlImages+'yt.png');
+		&:hover{
+			background-image: url($urlImages+'yt_color.png');
+		}
+	}
+}

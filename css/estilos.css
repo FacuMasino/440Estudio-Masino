@@ -1,99 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+body {
+  font-family: 'Poppins', sans-serif; }
 
-body{
-    font-family: 'Poppins', sans-serif;
-}
+#navMenu {
+  min-height: 80px; }
+  @media all and (max-width: 768px) {
+    #navMenu {
+      min-height: 60px; } }
 
-#navMenu{
-    min-height: 80px;
-}
+.navbar-brand img {
+  height: 54px;
+  padding-left: 0.5rem;
+  background-size: cover; }
 
-.navbar-brand img{
-    height: 54px;
-    padding-left: 0.5rem;
-    background-size: cover;
-}
+#heroImg {
+  background-image: url("../assets/img/heroimage_compressed.jpg");
+  background-size: cover;
+  height: 100vh; }
 
-#heroImg{
-    background-image: url('../assets/img/heroimage_compressed.jpg');
-    background-size: cover;
-    height: 100vh;
-}
+.heroTitulo {
+  /* Oscurece la imagen y resalta el texto */
+  background: radial-gradient(circle farthest-side at center center, rgba(0, 0, 0, 0.5) 45%, rgba(0, 255, 0, 0) 100%);
+  animation-duration: 2s; }
 
-.heroTitulo{ /* Oscurece la imagen y resalta el texto */
-    background: radial-gradient(circle farthest-side at center center, rgba(0,0,0,0.5) 45%, rgba(0,255,0,0) 100%);
-    animation-duration: 2s;
-}
+.bg-black {
+  background: #000; }
 
-.bg-black{
-    background: #000;
-}
+#servicios .col {
+  transition: transform 0.3s ease-in-out; }
+  #servicios .col:hover {
+    transform: scale(1.05); }
 
-#servicios .col{
-    transition: transform 0.3s ease-in-out;
-}
+.w-20 {
+  width: 20%; }
 
-#servicios .col:hover{
-    transform: scale(1.05);
-}
+@media all and (max-width: 768px) {
+  .w-sm-30 {
+    width: 30%; } }
 
-.w-20{
-    width: 20%;
-}
+.ObjFit-Cover {
+  object-fit: cover; }
 
-.ObjFit-Cover{
-    object-fit: cover;
-}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .overlay-dark {
+    background-color: rgba(0, 0, 0, 0.5); }
 
-.footerSocial-ig {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-image: url(../assets/img/ig.png);
-    background-size: cover;
-}
-
-.footerSocial-fb {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-image: url(../assets/img/fb.png);
-    background-size: cover;
-}
-
-.footerSocial-yt {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-image: url(../assets/img/yt.png);
-    background-size: cover;
-}
-
-@media all and (max-width: 768px){
-    #navMenu{
-        min-height: 60px;
-    }
-    .w-sm-30{
-        width: 30%;
-    }
-}
+.footerSocial {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: cover; }
+  .footerSocial-ig {
+    background-image: url("../assets/img/ig.png"); }
+    .footerSocial-ig:hover {
+      background-image: url("../assets/img/ig_color.png"); }
+  .footerSocial-fb {
+    background-image: url("../assets/img/fb.png"); }
+    .footerSocial-fb:hover {
+      background-image: url("../assets/img/fb_color.png"); }
+  .footerSocial-yt {
+    background-image: url("../assets/img/yt.png"); }
+    .footerSocial-yt:hover {
+      background-image: url("../assets/img/yt_color.png"); }
 
 @keyframes animarBarra {
-    from{
-        transform: translateX(100vw);
-    }
-    to{
-        transform: translateX(0);
-    }
-}
+  from {
+    transform: translateX(100vw); }
+  to {
+    transform: translateX(0); } }
 
-.activeLinkBar{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-top: solid 2.5px #fff;
-    border-bottom: solid 2.5px #fff;
-    animation-duration: 1.2s;
-    animation-name: animarBarra;
-    animation-timing-function: ease-in-out;
-}
+.activeLinkBar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-top: solid 2.5px #fff;
+  border-bottom: solid 2.5px #fff;
+  animation-duration: 1.2s;
+  animation-name: animarBarra;
+  animation-timing-function: ease-in-out;
+  pointer-events: none;
+  /* Ignora eventos del mouse, permitiendo el click al elemento <a> que está debajo */ }

@@ -1,0 +1,20 @@
+@keyframes animarBarra {
+	from{
+		transform: translateX(100vw);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+.activeLinkBar{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-top: solid 2.5px #fff;
+	border-bottom: solid 2.5px #fff;
+	animation-duration: 1.2s;
+	animation-name: animarBarra;
+	animation-timing-function: ease-in-out;
+	pointer-events: none; /* Ignora eventos del mouse, permitiendo el click al elemento <a> que está debajo */
+}
