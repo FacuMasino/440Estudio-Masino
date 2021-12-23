@@ -1,3 +1,13 @@
 $point-sm: 768px;
 
+$NavFontSize: (
+	"sm": 18px,
+	"md": 24px
+);
+
 $urlImages: '../assets/img/';
+
+// Si se quiere agregar más clases de iconos solo se agrega a esta lista.
+// El nombre del archivo siempre debera ser {siglas}.png
+// y {siglas_hov}.png para el evento hover
+$socialIcons: "ig", "fb", "yt";

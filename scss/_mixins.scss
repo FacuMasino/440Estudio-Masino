@@ -1,0 +1,12 @@
+
+@mixin footerSocialIcons {
+     @each $k in $socialIcons {
+        .footerSocial-#{$k}{
+            @extend %footerSocial;
+            background-image: url($urlImages+$k+'.png');
+            &:hover{
+                background-image: url($urlImages+$k+"_hov.png");
+            }
+        }
+     }
+}

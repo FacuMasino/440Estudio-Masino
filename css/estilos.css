@@ -9,6 +9,13 @@ body {
     #navMenu {
       min-height: 60px; } }
 
+.navbar-nav {
+  font-size: 24px;
+  font-weight: 400; }
+  @media all and (max-width: 768px) {
+    .navbar-nav {
+      font-size: 18px; } }
+
 .navbar-brand img {
   height: 54px;
   padding-left: 0.5rem;
@@ -23,6 +30,9 @@ body {
   /* Oscurece la imagen y resalta el texto */
   background: radial-gradient(circle farthest-side at center center, rgba(0, 0, 0, 0.5) 45%, rgba(0, 255, 0, 0) 100%);
   animation-duration: 2s; }
+
+.display-4 {
+  font-weight: 400; }
 
 .bg-black {
   background: #000; }
@@ -49,23 +59,26 @@ body {
   .overlay-dark {
     background-color: rgba(0, 0, 0, 0.5); }
 
-.footerSocial {
+.footerSocial-ig, .footerSocial-fb, .footerSocial-yt {
   display: inline-block;
   width: 50px;
   height: 50px;
   background-size: cover; }
-  .footerSocial-ig {
-    background-image: url("../assets/img/ig.png"); }
-    .footerSocial-ig:hover {
-      background-image: url("../assets/img/ig_color.png"); }
-  .footerSocial-fb {
-    background-image: url("../assets/img/fb.png"); }
-    .footerSocial-fb:hover {
-      background-image: url("../assets/img/fb_color.png"); }
-  .footerSocial-yt {
-    background-image: url("../assets/img/yt.png"); }
-    .footerSocial-yt:hover {
-      background-image: url("../assets/img/yt_color.png"); }
+
+.footerSocial-ig {
+  background-image: url("../assets/img/ig.png"); }
+  .footerSocial-ig:hover {
+    background-image: url("../assets/img/ig_hov.png"); }
+
+.footerSocial-fb {
+  background-image: url("../assets/img/fb.png"); }
+  .footerSocial-fb:hover {
+    background-image: url("../assets/img/fb_hov.png"); }
+
+.footerSocial-yt {
+  background-image: url("../assets/img/yt.png"); }
+  .footerSocial-yt:hover {
+    background-image: url("../assets/img/yt_hov.png"); }
 
 @keyframes animarBarra {
   from {

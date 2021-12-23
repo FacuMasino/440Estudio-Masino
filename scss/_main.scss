@@ -9,6 +9,14 @@ body{
 	}
 }
 
+.navbar-nav{
+	font-size: map-get($NavFontSize, "md");
+	font-weight: 400;
+	@media all and (max-width: $point-sm){
+		font-size: map-get($NavFontSize, "sm");
+	}
+}
+
 .navbar-brand img{
 	height: 54px;
 	padding-left: 0.5rem;
@@ -24,6 +32,10 @@ body{
 .heroTitulo{ /* Oscurece la imagen y resalta el texto */
 	background: radial-gradient(circle farthest-side at center center, rgba(0,0,0,0.5) 45%, rgba(0,255,0,0) 100%);
 	animation-duration: 2s;
+}
+
+.display-4{
+	font-weight: 400;
 }
 
 .bg-black{
@@ -62,27 +74,11 @@ body{
 	}
 }
 
-.footerSocial{
+%footerSocial{
 	display: inline-block;
 	width: 50px;
 	height: 50px;
 	background-size: cover;
-	&-ig{
-		background-image: url($urlImages+'ig.png');
-		&:hover{
-			background-image: url($urlImages+'ig_color.png');
-		}
-	}
-	&-fb{
-		background-image: url($urlImages+'fb.png');
-		&:hover{
-			background-image: url($urlImages+'fb_color.png');
-		}
-	}
-	&-yt{
-		background-image: url($urlImages+'yt.png');
-		&:hover{
-			background-image: url($urlImages+'yt_color.png');
-		}
-	}
 }
+
+@include footerSocialIcons;

@@ -1,7 +1,7 @@
 {
-	"name": "440estudio_sass",
+	"name": "440estudio-masino",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Proyecto final para el curso de desarrollo web",
 	"main": "index.js",
 	"scripts": {
 	"test": "echo \"Error: no test specified\" && exit 1",
