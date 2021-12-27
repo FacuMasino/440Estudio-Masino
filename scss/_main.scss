@@ -61,6 +61,15 @@ body{
 	}
 }
 
+.checkList{
+	list-style: none;
+	li::before {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content:'\f00c';
+	}
+}
+
 .ObjFit-Cover{
 	object-fit: cover;
 }
@@ -71,6 +80,75 @@ body{
 	left: 0;
 	&-dark{
 		background-color: rgba(0,0,0,0.5);
+	}
+}
+
+%customForm{
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	border-radius: 0;
+}
+
+%formFocusStyle{
+	border: 1px solid #000;
+	box-shadow: 0 0.2rem 0 0 rgba(170,170,170, 0.5);
+}
+
+.input-group:focus-within {
+	@extend %formFocusStyle;
+	*.input-group-text{
+		border: none;
+	}
+	*.form-control{
+		@extend %customForm;
+		border: none;
+		box-shadow: none;
+	}
+}
+
+.form-select{
+	background-color: transparent;
+	border: 1px solid #000;
+	border-radius: 0;
+	&:focus{
+		@extend %formFocusStyle;
+	}
+}
+
+.form-check-input{
+	&:focus{
+		@extend %formFocusStyle;
+	}
+	&:checked{
+		background-color: #000;
+		border-color: #000;
+	}
+}
+
+.input-group-text{
+	@extend %customForm;
+}
+
+.form-control{
+	@extend %customForm;
+}
+
+form {
+	.btn{
+	border-radius: 0;
+	color: #000;
+		&-primary{
+			border-color: #000;
+			background-color: transparent;
+				&:hover, &:focus, &:active{
+					border-color: #000;
+					background-color: #000;
+				}
+				&:focus, &:focus:active{
+					box-shadow: 0 0 0 0.2rem rgba(170,170,170, 0.5);
+				}
+			}
 	}
 }
 

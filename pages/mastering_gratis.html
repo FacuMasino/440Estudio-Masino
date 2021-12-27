@@ -15,10 +15,12 @@
 
 </head>
 <body>
+	
+	<!-- HEADER -->
 	<header id="navMenu">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-black text-uppercase fs-4">
 			<div class="container-fluid">
-				<a class="navbar-brand me-auto text-white" href="#"><img src="../assets/img/Logo.png" alt="Logo de 440Estudio"></a>
+				<a class="navbar-brand me-auto text-white" href="#"><img src="../assets/img/Logo.png" title="440Estudio" alt="Logo de 440Estudio"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -46,6 +48,7 @@
 		</nav>
 	</header>
 
+	<!-- MAIN -->
 	<main>
 		<div id="heroImg" class="container-fluid p-0">
 			<div class="container-fluid p-0 h-100 heroTitulo animate__animated animate__fadeIn">
@@ -53,20 +56,78 @@
 			</div>
 		</div>
 
-		<!-- SECCIÓN EN DESARROLLO -->
-		<div id="contenido">
-			<div id="masteringPage">
-				<p>Envianos tu canción y te enviamos 1 minuto de muestra gratis para que pruebes nuestro servicio</p>
-				<p>Completá el formulario</p>
-				<form action="" method="POST" enctype="multipart/form-data">
-					<input type="text" name="nombre" placeholder="Tu Nombre">
-					<input type="text" name="email" placeholder="Tu Email">
-					<p>Aclaraciones:</p>
-					<textarea name="mensaje" placeholder="mensaje"></textarea>
-					<label>Adjunta el archivo:</label>
-					<input type="file" name="archivo">
-					<input type="submit" value="Enviar">
-				</form>
+		<div id="contenido" class="container">
+			<div class="row m-0 mt-2 mt-md-4 mb-2 mb-md-4 p-0">
+				<div class="col-12 col-md-5">
+					<img class="ObjFit-Cover h-100 w-100" src="../assets/img/mastering2.jpg" loading="lazy" alt="Mastering">					
+				</div>
+				<div class="col-12 col-md-7">
+					<div class="d-flex flex-row-reverse h-100 align-items-center">
+						<div class="col-12 col-md-10">
+							<h2>Probá nuestro servicio</h2>
+							<p>Te ofrecemos la posibilidad de probar el servicio de mastering de forma gratuita, nos envías tu canción y nosotros nos encargamos del resto. </p>
+							<p class="h5">Lo que obtendrás:</p>
+							<ul class="checkList">
+								<li>Ecualización</li>
+								<li>Compresión Multibanda</li>
+								<li>Expansión estéreo</li>
+								<li>Balance de frecuencias</li>
+								<li>Control de dinámica</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-0 mt-2 mt-md-4 mb-2 mb-md-4 p-0 bg-light">
+				<div class="col-12 col-md-5 p-2 p-md-4 text-center">
+					<div class="d-flex h-100 align-items-center">
+						<div class="col-12">
+							<h3>IMPORTANTE<i class="fas fa-exclamation-circle"></i></h3>
+							<p class="m-0">Antes de enviarnos el audio deberás tener en cuenta una serie de requisitos</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-7">
+					<div class="d-flex flex-row-reverse">
+						<div class="col-12 col-md-10">
+							<ul class="list-unstyled m-2 m-md-4">
+								<li><i class="fas fa-times"></i>Sin Compresión aplicada en el master</li>
+								<li><i class="fas fa-times"></i>Sin limitador</li>
+								<li><i class="fas fa-check"></i>Deberás dejar un headroom mínimo de 3dB</li>
+								<li><i class="fas fa-times"></i>No se aceptan archivos comprimidos en .Mp3</li>
+								<li><i class="fas fa-check"></i>El sample rate mínimo deberá ser de 44.1kHz y bit depth 24bit</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-0 mt-2 mt-md-4 mb-2 mb-md-4 p-0 rounded border border-3 border-dark bg-light">
+				<div class="col-12 p-2 p-md-4 text-center">
+					<h4>Completá el formulario</h4>
+					<p>Envianos tu canción y masterizamos 1 minuto de muestra gratis!</p>
+					<form action="" method="POST" enctype="multipart/form-data">
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" name="nombre" placeholder="Tu Nombre" required>
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" name="email" placeholder="Tu Email" required>
+							<span class="input-group-text"><i class="far fa-envelope"></i></span>
+						</div>
+
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="far fa-comment-dots"></i></span>
+							<textarea class="form-control" name="mensaje" placeholder="aclaraciones" required></textarea>
+						</div>
+						
+						<div class="input-group mb-3">
+							<input type="file" class="form-control" name="archivo" required>
+							<span class="input-group-text"><i class="far fa-file"></i></span>
+						</div>
+						<input type="submit" class="btn btn-primary" value="Enviar">
+					</form>
+				</div>
 			</div>
 		</div>
 	</main>

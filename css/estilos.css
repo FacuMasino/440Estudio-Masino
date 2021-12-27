@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 body {
   font-family: 'Poppins', sans-serif; }
@@ -49,6 +50,13 @@ body {
   .w-sm-30 {
     width: 30%; } }
 
+.checkList {
+  list-style: none; }
+  .checkList li::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f00c'; }
+
 .ObjFit-Cover {
   object-fit: cover; }
 
@@ -58,6 +66,44 @@ body {
   left: 0; }
   .overlay-dark {
     background-color: rgba(0, 0, 0, 0.5); }
+
+.input-group:focus-within *.form-control, .input-group-text, .form-control {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0; }
+
+.input-group:focus-within, .form-select:focus, .form-check-input:focus {
+  border: 1px solid #000;
+  box-shadow: 0 0.2rem 0 0 rgba(170, 170, 170, 0.5); }
+
+.input-group:focus-within *.input-group-text {
+  border: none; }
+
+.input-group:focus-within *.form-control {
+  border: none;
+  box-shadow: none; }
+
+.form-select {
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 0; }
+
+.form-check-input:checked {
+  background-color: #000;
+  border-color: #000; }
+
+form .btn {
+  border-radius: 0;
+  color: #000; }
+  form .btn-primary {
+    border-color: #000;
+    background-color: transparent; }
+    form .btn-primary:hover, form .btn-primary:focus, form .btn-primary:active {
+      border-color: #000;
+      background-color: #000; }
+    form .btn-primary:focus, form .btn-primary:focus:active {
+      box-shadow: 0 0 0 0.2rem rgba(170, 170, 170, 0.5); }
 
 .footerSocial-ig, .footerSocial-fb, .footerSocial-yt {
   display: inline-block;

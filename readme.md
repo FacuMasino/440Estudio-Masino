@@ -4,6 +4,14 @@ _440Estudio es el nombre elegido para el proyecto final del curso "Desarrollo We
 
 ## Registro de cambios
 
+> Tercera entrega proyecto final
+ 
+ + Mejora general en los estilos SCSS
+ + Agregado el atributo loading lazy para optimizar carga de imágenes
+ + Se completaron secciones que faltaban
+ + Se personalizó el estilo de los formularios para que se adapte al diseño del sitio
+ + Se importó Font Awesome en _fuentes.scss para utilizar los íconos
+
 > Desafío Clase 15 SASS + SEO
 
 + map $NavFontSize agregado en _variables.scss
