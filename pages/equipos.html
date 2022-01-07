@@ -1,18 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-
 	<title>440Estudio - Equipos</title>
 	<meta name="description" content="Conocé la lista de equipos que tenemos para ofrecerte en 440Estudio, todo lo que necesitás para lograr un sonido profesional lo encontrás acá.">
 	<meta name="keywords" content="Estudio de grabación en Buenos Aires, estudio de grabación, buenos aires estudio de grabación, grabación de voces, grabación de instrumentos, servicio de grabación, servicio de mezcla, mezcla de audio, servicio de edición de audio, servicio de mastering, mastering de audio, producción musical, estudio de producción musical, servicio de producción musical, grabar en buenos aires, producción de audio, productor musical, ingeniero de mezcla, técnico de grabación, edición de voz, afinación de voz, precios de grabación, precio estudio de grabación, post producción de audio">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link href="../css/estilos.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="manifest" href="../site.webmanifest">
 </head>
 <body>
 
@@ -57,61 +59,153 @@
 		</div>
 		
 		<div id="contenido" class="container p-0">	
-			<div class="row m-0 mt-2 mt-md-4 p-2 p-md-4 bg-light">
+			<section class="row m-0 mt-2 mt-md-4 mb-2 mb-md-4 p-2 p-md-4 bg-light">
 				<div class="col-12 col-md-7">
 					<div class="container-fluid h-100 position-relative p-0">
 						<img class="img-fluid h-100 w-100 ObjFit-Cover" src="../assets/img/studiorack.jpg" loading="lazy" alt="Rack con equipos">
-						<div class="row row-cols-1 g-0 h-100 w-100 overlay overlay-dark p-0">
-							<div class="row align-items-center g-0">
-								<div class="col-6 text-center text-white" data-bs-toggle="collapse" data-bs-target="#calibrado" role="button" aria-expanded="false" aria-controls="calibrado">
-									<p>Equipos calibrados [+]</p>
-									<div class="collapse" id="calibrado">
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quod provident accusamus quibusdam, qui harum modi eaque necessitatibus voluptatem. Praesentium adipisci at laborum dicta recusandae doloremque quasi impedit sint minima.
-									</div>
-								</div>
-								<div class="col-6 text-center text-white" data-bs-toggle="collapse" data-bs-target="#marcas" role="button" aria-expanded="false" aria-controls="marcas">
-									<p>Marcas Premium [+]</p>
-									<div class="collapse" id="marcas">
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quod provident accusamus quibusdam, qui harum modi eaque necessitatibus voluptatem. Praesentium adipisci at laborum dicta recusandae doloremque quasi impedit sint minima.
-									</div>
+						<div class="d-flex flex-wrap align-items-center justify-content-center h-100 w-100 overlay overlay-dark p-0 overflow-hidden" id="collapseParent">
+							<div class="col-12 h-100 collapse text-center text-white" id="calibrado" data-bs-parent="#collapseParent">
+								<div class="d-flex h-100 flex-column justify-content-center p-2 p-md-4 position-relative">
+									<p class="m-0">Realizamos mantenimiento y pruebas mensuales a todos nuestros equipos para asegurar un funcionamiento óptimo a la hora de su utilización. Contamos con las herramientas y experiencia requerida para calibrarlos y repararlos cuándo sea necesario.</p>
+									<i class="m-0 position-absolute top-0 end-0 p-1 p-md-4 far fa-window-close" data-bs-toggle="collapse" data-bs-target="#calibrado" role="button" aria-expanded="false" aria-controls="calibrado"></i>
 								</div>
 							</div>
-							<div class="row align-items-center g-0">
-								<div class="col-6 text-center text-white" data-bs-toggle="collapse" data-bs-target="#analogSound" role="button" aria-expanded="false" aria-controls="analogSound">
-								<p>Sonido analógico [+]</p>
-									<div class="collapse" id="analogSound">
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quod provident accusamus quibusdam, qui harum modi eaque necessitatibus voluptatem. Praesentium adipisci at laborum dicta recusandae doloremque quasi impedit sint minima.
-									</div>
+							<div class="col-12 h-100 collapse text-center text-white" id="marcas" data-bs-parent="#collapseParent">
+								<div class="d-flex h-100 flex-column justify-content-center p-2 p-md-4 position-relative">
+									<p class="m-0">Contamos con las marcas TOP de los equipos analógicos, ediciones únicas y cada una con el sonido que lo caracteriza. Algunas de ellas son Universal Audio, Chandler Limited, Shadow Hills, API, Manley, Neumann, AKG.</p>
+									<i class="m-0 position-absolute top-0 end-0 p-1 p-md-4 far fa-window-close" data-bs-toggle="collapse" data-bs-target="#marcas" role="button" aria-expanded="false" aria-controls="marcas"></i>
 								</div>
-								<div class="col-6 text-center text-white" data-bs-toggle="collapse" data-bs-target="#noLatency" role="button" aria-expanded="false" aria-controls="noLatency">
-								<p>Sin latencia [+]</p>
-									<div class="collapse" id="noLatency">
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem quod provident accusamus quibusdam, qui harum modi eaque necessitatibus voluptatem. Praesentium adipisci at laborum dicta recusandae doloremque quasi impedit sint minima.
-									</div>
+							</div>
+							<div class="col-12 h-100 collapse text-center text-white" id="noLatency" data-bs-parent="#collapseParent">
+								<div class="d-flex h-100 flex-column justify-content-center p-2 p-md-4 position-relative">
+									<p class="m-0">En 440Estudio encontramos la mejor manera de conectar todo nuestro equipamento para que el audio llegue a la etapa de monitorización con la menor latencia posible, vas a poder escuchar el sonido procesado en tiempo real al mismo tiempo que grabas.</p>
+									<i class="m-0 position-absolute top-0 end-0 p-1 p-md-4 far fa-window-close" data-bs-toggle="collapse" data-bs-target="#noLatency" role="button" aria-expanded="false" aria-controls="noLatency"></i>
+								</div>
+							</div>
+							<div class="col-12 h-100 collapse text-center text-white" id="analogSound" data-bs-parent="#collapseParent">
+								<div class="d-flex h-100 flex-column justify-content-center p-2 p-md-4 position-relative">
+									<p class="m-0">Si querés conseguir ese sonido potente pero a la vez cálido que tanto escuchas en las grandes producciones, nada se compara al sonido analógico que pueden ofrecer los equipos de carne y hueso. Grabá con nosotros y comprobá la diferencia!</p>
+									<i class="m-0 position-absolute top-0 end-0 p-1 p-md-4 far fa-window-close" data-bs-toggle="collapse" data-bs-target="#analogSound" role="button" aria-expanded="false" aria-controls="analogSound"></i>
+								</div>
+							</div>
+							<div class="d-flex p-1 align-items-center w-100">
+								<div class="col-6 p-1 text-center text-white hover-Scale" data-bs-toggle="collapse" data-bs-target="#calibrado" role="button" aria-expanded="false" aria-controls="calibrado">
+									<span class="h5">Equipos calibrados</span>
+									<i class="d-block far fa-plus-square"></i>
+								</div>
+								<div class="col-6 p-1 text-center text-white hover-Scale" data-bs-toggle="collapse" data-bs-target="#marcas" role="button" aria-expanded="false" aria-controls="marcas">
+									<span class="h5">Marcas Premium</span>
+									<i class="d-block far fa-plus-square"></i>
+								</div>
+							</div>
+							<div class="d-flex p-1 align-items-center w-100">
+								<div class="col-6 p-1 text-center text-white hover-Scale" data-bs-toggle="collapse" data-bs-target="#analogSound" role="button" aria-expanded="false" aria-controls="analogSound">
+									<span class="h5">Sonido analógico</span>
+									<i class="d-block far fa-plus-square"></i>
+								</div>
+								<div class="col-6 p-1 text-center text-white hover-Scale" data-bs-toggle="collapse" data-bs-target="#noLatency" role="button" aria-expanded="false" aria-controls="noLatency">
+									<span class="h5">Sin latencia</span>
+									<i class="d-block far fa-plus-square"></i>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-md-5 align-self-center">
+				<div class="col-12 col-md-5 align-self-center wow animate__animated animate__fadeIn" data-wow-duration="1.2s">
 					<div class="d-flex flex-row-reverse h-100 align-items-center">
 						<div class="col-12 col-md-10">
-							<p class="h5">Una razón más para elegirnos</p>
-							Si bien el artista y los músicos son muy importantes a la hora de grabar y producir, los equipos también cumplen un papel fundamental, ya que de ellos depende que la interpretación y el sonido sean traducidos lo más fiel posible al original y con la mejor definición. 
-							En 440 Estudio no solo contamos con los equipos de más alta calidad sino que incluso algunos imprimen características al sonido que solo es posible con hardware analógico logrando un resultado único. Así como también contamos con equipos digitales de última generación que te permitirán conseguir un sonido prístino y transparente.
+							<h2 class="mt-2 mt-md-0">Una razón más para elegirnos</h2>
+							<p>Si bien el artista y los músicos son muy importantes a la hora de grabar y producir, los equipos también cumplen un papel fundamental, ya que de ellos depende que la interpretación y el sonido sean traducidos lo más fiel posible al original y con la mejor definición. 
+							En 440 Estudio no solo contamos con los equipos de más alta calidad sino que incluso algunos imprimen características al sonido que solo es posible con hardware analógico logrando un resultado único. Así como también contamos con equipos digitales de última generación que te permitirán conseguir un sonido prístino y transparente.</p>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
-			<div class="container px-3 px-md-5 mt-3 mt-md-5 mb-3 mb-5">
-				<div class="row row-cols-1">
-					<div class="col">
-						<p class="h4 text-center mb-2 pb-md-4">Equipamento</p>
-						<!-- falta agregar listado de equipos -->
+			<section class="row m-0 mt-2 mt-md-4 mb-2 mb-md-4 p-2 p-md-4">
+				<div class="col-12 col-md-7 wow animate__animated animate__fadeIn" data-wow-duration="1.2s">
+					<div class="d-flex h-100 align-items-center">
+						<div class="col-12 col-md-10">
+							<p class="h3">El corazón del estudio</p>
+							<p>En nuestro control room contamos con la aclamada API 1608, una consola analógica de 32 canales con faders automatizados y pantalla táctil. Esto nos ofrece lo mejor de ambos mundos, tanto el analógico como digital, ya que API (Automated Processes Inc.) se caracteriza por fabricar las consolas de grabación analógica de la más alta calidad a nivel mundial.</p>
+						</div>
 					</div>
 				</div>
-			</div>
+				<div class="col-12 col-md-5">
+					<img class="ObjFit-Contain h-100 w-100" src="../assets/img/api1608.png" loading="lazy" alt="Mastering">					
+				</div>
+			</section>
+
+			<section class="container px-3 px-md-5 mt-3 mt-md-5 mb-3 mb-md-5">
+				<div class="row row-cols-1">
+					<div class="col">
+						<p class="h4 text-center mb-2 mb-md-4">Equipamento</p>
+						<div class="d-flex flex-wrap p-2 p-md-4 bg-light">
+							<div class="col-12 col-md-6">
+								<p class="h5 text-center">Micrófonos <i class="fas fa-microphone"></i></p>
+								<ul>
+									<li>1 Neumann U 67</li>
+									<li>1 Neumann TLM103</li>
+									<li>1 AKG c214</li>
+									<li>1 AKG c414 XLS</li>
+									<li>1 AKG D112</li>
+									<li>8 Shure SM57</li>
+									<li>2 Shure BETA 52</li>
+									<li>4 Telefunken M60 FET</li>
+								</ul>
+							</div>
+							<div class="col-12 col-md-6">
+								<p class="h5 text-center">Compresores <i class="fas fa-wave-square"></i></p>
+								<ul>
+									<li>2 UA Teletronix LA-2A</li>
+									<li>2 UA 1176 LN</li>
+									<li>1 Fairchild 670 Stereo Comp</li>
+									<li>1 Neve Compressor Limiter 2254 Stereo</li>
+									<li>1 Shadow Hills Mastering Compressor</li>
+									<li>1 Summit Audio TPA-200B</li>
+								</ul>
+							</div>
+						</div>
+						<div class="d-flex flex-wrap p-2 p-md-4">
+							<div class="col-12 col-md-6">
+								<p class="h5 text-center">Ecualizadores <i class="fas fa-sliders-h"></i></p>
+								<ul>
+									<li>1 Manley Massive Passive</li>
+									<li>3 Pultec EQP-1A</li>
+									<li>2 API 550B Discrete EQ</li>
+									<li>2 Maag Audio EQ4 500 series</li>
+									<li>1 Dangeour Music BAX EQ</li>
+								</ul>
+							</div>
+							<div class="col-12 col-md-6">
+								<p class="h5 text-center">Preamplificadores <i class="fas fa-volume-up"></i></p>
+								<li>1 Chandler TG2-500</li>
+								<li>3 API 512c</li>
+								<li>1 Manley VoxBox</li>
+								<li>1 Shadow Hills Mono</li>
+								<li>1 Avalon VT-737</li>
+								<li>1 Focusrite ISA One</li>
+							</div>
+						</div>
+						<div class="d-flex flex-wrap p-2 p-md-4 bg-light">
+							<div class="col-12 col-md-6">
+								<p class="h5 text-center">Interfaces y Conversores <i class="fas fa-audio-description"></i></p>
+								<ul>
+									<li>1 Sumador Dangerous Music 2-Bus+</li>
+									<li>1 Conversor Crane Song HEDD Quantum</li>
+									<li>1 Universal Audio Apollo X16</li>
+									<li>1 UAD-2 Satellite OCTO-Core</li>
+								</ul>
+							</div>
+							<div class="col-12 col-md-6">
+								<p class="h5 text-center">Monitores <i class="fas fa-headphones"></i></p>
+								<li>1 Par Genelec 1031 </li>
+								<li>1 Par Proac Studio 100</li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 	</main>
 
@@ -122,13 +216,13 @@
 				<div class="container w-75 p-0">
 					<ul class="nav flex-nowrap justify-content-around">
 						<li class="nav-item p-2">
-							<a class="footerSocial footerSocial-ig" href="#"></a>
+							<a class="footerSocial-ig" target="_blank" rel="noopener" href="https://www.instagram.com"></a>
 						</li>
 						<li class="nav-item p-2">
-							<a class="footerSocial footerSocial-fb" href="#"></a>
+							<a class="footerSocial-fb" target="_blank" rel="noopener" href="https://www.facebook.com/"></a>
 						</li>
 						<li class="nav-item p-2">
-							<a class="footerSocial footerSocial-yt" href="#"></a>
+							<a class="footerSocial-yt" target="_blank" rel="noopener" href="https://www.youtube.com/"></a>
 						</li>
 					</ul>
 				</div>

@@ -1,3 +1,8 @@
+::selection{
+	color: #fff;
+	background: #6c757d;
+}
+
 body{
 	font-family: 'Poppins', sans-serif;
 }
@@ -24,9 +29,12 @@ body{
 }
 
 #heroImg{
-	background-image: url($urlImages+'heroimage_compressed.jpg');
+	background-image: url($urlImages+'heroimage_desktop.jpg');
 	background-size: cover;
 	height: 100vh;
+	@media all and (max-width: $point-sm){
+		background-image: url($urlImages+'heroimage_mobile.jpg');
+	}
 }
 
 .heroTitulo{ /* Oscurece la imagen y resalta el texto */
@@ -67,11 +75,17 @@ body{
 		font-family: "Font Awesome 5 Free";
 		font-weight: 900;
 		content:'\f00c';
+		padding-right: 0.5rem;
 	}
 }
 
-.ObjFit-Cover{
-	object-fit: cover;
+.ObjFit{
+	&-Cover{
+		object-fit: cover;
+	}
+	&-Contain{
+		object-fit: contain;
+	}
 }
 
 .overlay{
@@ -79,7 +93,14 @@ body{
 	top: 0;
 	left: 0;
 	&-dark{
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+}
+
+.hover-Scale{
+	transition: transform 0.2s ease-in-out;
+	&:hover{
+		transform: scale(1.05);
 	}
 }
 
@@ -134,21 +155,36 @@ body{
 	@extend %customForm;
 }
 
-form {
-	.btn{
-	border-radius: 0;
-	color: #000;
-		&-primary{
-			border-color: #000;
-			background-color: transparent;
-				&:hover, &:focus, &:active{
-					border-color: #000;
-					background-color: #000;
-				}
-				&:focus, &:focus:active{
-					box-shadow: 0 0 0 0.2rem rgba(170,170,170, 0.5);
-				}
+.btn{
+border-radius: 0;
+color: #000;
+	&-primary{
+		border-color: #000;
+		background-color: transparent;
+			&:hover, &:focus, &:active{
+				border-color: #000;
+				background-color: #000;
 			}
+			&:focus, &:focus:active{
+				box-shadow: 0 0 0 0.2rem rgba(170,170,170, 0.5);
+			}
+		}
+}
+
+.contactBtn{
+	text-decoration: none;
+	color:#212529;
+	&.fa-whatsapp-square:hover{
+		color: #25D366;
+	}
+	&.fa-telegram:hover{
+		color: #0088cc;
+	}
+	&.fa-instagram-square:hover{
+		color: #833ab4;
+	}
+	&.fa-facebook-messenger:hover{
+		color: #0078FF;
 	}
 }
 

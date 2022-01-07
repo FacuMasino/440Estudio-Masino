@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+::selection {
+  color: #fff;
+  background: #6c757d; }
+
 body {
   font-family: 'Poppins', sans-serif; }
 
@@ -23,9 +27,12 @@ body {
   background-size: cover; }
 
 #heroImg {
-  background-image: url("../assets/img/heroimage_compressed.jpg");
+  background-image: url("../assets/img/heroimage_desktop.jpg");
   background-size: cover;
   height: 100vh; }
+  @media all and (max-width: 768px) {
+    #heroImg {
+      background-image: url("../assets/img/heroimage_mobile.jpg"); } }
 
 .heroTitulo {
   /* Oscurece la imagen y resalta el texto */
@@ -55,17 +62,26 @@ body {
   .checkList li::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: '\f00c'; }
+    content: '\f00c';
+    padding-right: 0.5rem; }
 
 .ObjFit-Cover {
   object-fit: cover; }
+
+.ObjFit-Contain {
+  object-fit: contain; }
 
 .overlay {
   position: absolute;
   top: 0;
   left: 0; }
   .overlay-dark {
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(0, 0, 0, 0.6); }
+
+.hover-Scale {
+  transition: transform 0.2s ease-in-out; }
+  .hover-Scale:hover {
+    transform: scale(1.05); }
 
 .input-group:focus-within *.form-control, .input-group-text, .form-control {
   background-color: transparent;
@@ -93,17 +109,29 @@ body {
   background-color: #000;
   border-color: #000; }
 
-form .btn {
+.btn {
   border-radius: 0;
   color: #000; }
-  form .btn-primary {
+  .btn-primary {
     border-color: #000;
     background-color: transparent; }
-    form .btn-primary:hover, form .btn-primary:focus, form .btn-primary:active {
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
       border-color: #000;
       background-color: #000; }
-    form .btn-primary:focus, form .btn-primary:focus:active {
+    .btn-primary:focus, .btn-primary:focus:active {
       box-shadow: 0 0 0 0.2rem rgba(170, 170, 170, 0.5); }
+
+.contactBtn {
+  text-decoration: none;
+  color: #212529; }
+  .contactBtn.fa-whatsapp-square:hover {
+    color: #25D366; }
+  .contactBtn.fa-telegram:hover {
+    color: #0088cc; }
+  .contactBtn.fa-instagram-square:hover {
+    color: #833ab4; }
+  .contactBtn.fa-facebook-messenger:hover {
+    color: #0078FF; }
 
 .footerSocial-ig, .footerSocial-fb, .footerSocial-yt {
   display: inline-block;

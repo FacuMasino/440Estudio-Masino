@@ -37,3 +37,6 @@ logs
 
 # Ignorar node_modules
 node_modules/
+
+# Ignorar carpeta PSD
+PSD Files/
