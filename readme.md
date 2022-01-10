@@ -4,6 +4,17 @@ _440Estudio es el nombre elegido para el proyecto final del curso "Desarrollo We
 
 ## Registro de cambios
 
+> Entrega final
+
++ Favicon agregado
++ Correcciones en el código SASS
++ Correciones generales en código HTML
++ Contenido agregado en las secciones de "Mastering gratis", "Equipos" y "Contacto".
++ "Hero image" optimizada para mobile
++ Agregado el atributo "rel=noopener" en links externos que podía exponer la página al bug "reverse tabnabbing"
++ Corregidos algunos errores de indentación
++ Form de sección "Contacto" funcional (solo en heroku)
+
 > Tercera entrega proyecto final
  
  + Mejora general en los estilos SCSS

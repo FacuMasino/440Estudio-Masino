@@ -161,14 +161,14 @@ color: #000;
 	&-primary{
 		border-color: #000;
 		background-color: transparent;
-			&:hover, &:focus, &:active{
-				border-color: #000;
-				background-color: #000;
-			}
-			&:focus, &:focus:active{
-				box-shadow: 0 0 0 0.2rem rgba(170,170,170, 0.5);
-			}
+		&:hover, &:focus, &:active{
+			border-color: #000;
+			background-color: #000;
 		}
+		&:focus, &:focus:active{
+			box-shadow: 0 0 0 0.2rem rgba(170,170,170, 0.5);
+		}
+	}
 }
 
 .contactBtn{

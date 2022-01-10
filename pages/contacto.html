@@ -17,7 +17,6 @@
 	<link rel="manifest" href="../site.webmanifest">
 </head>
 <body>
-
 	<!-- HEADER -->
 	<header id="navMenu">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-black text-uppercase fs-4">
@@ -49,7 +48,6 @@
 			</div>
 		</nav>
 	</header>
-
 	<!-- MAIN -->
 	<main>
 		<div id="heroImg" class="container-fluid p-0">
@@ -57,82 +55,105 @@
 				<h1 class="wow text-white d-flex justify-content-center h-100 align-items-center text-center display-4 text-uppercase animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.35s">CONTACTO</h1>
 			</div>
 		</div>
-
 		<div id="contenido" class="container">
 			<section class="row m-0 mt-2 mt-md-4 mb-2 mb-md-4">
 				<div class="col-12 p-2 p-md-4 text-center">
 					<h2>Ponte en contacto con nosotros! <i class="fas fa-phone wow animate__animated animate__tada"  data-wow-duration="1.5s"></i></h2>
-					<form action="" method="POST">
+					<form id="emailForm" method="POST">
 						<div class="input-group mb-3">
-							<input class="form-control" type="text" name="nombre" placeholder="Tu Nombre">
+							<input class="form-control" type="text" name="inp_nombre" placeholder="Tu nombre y apellido" required>
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-
 						<div class="input-group mb-3">
-							<input class="form-control" type="text" name="email" placeholder="Tu Email">
+							<input class="form-control" type="email" name="inp_email" placeholder="Tu Email" required>
 							<span class="input-group-text"><i class="fas fa-envelope"></i></span>
 						</div>
-						
 						<div class="input-group mb-3">
-							<input class="form-control" type="text" name="telefono" placeholder="Tu Teléfono (opcional)">
+							<input class="form-control" type="number" name="inp_telefono" placeholder="Tu Teléfono (opcional)">
 							<span class="input-group-text"><i class="fas fa-phone"></i></span>
 						</div>
-
 						<div class="input-group mb-3">
+							<textarea class="form-control" name="inp_mensaje" placeholder="mensaje" required></textarea>
 							<span class="input-group-text"><i class="far fa-comment-dots"></i></span>
-							<textarea class="form-control" name="mensaje" placeholder="mensaje" required></textarea>
 						</div>
-
 						<div class="form-check text-start">
 							<label class="form-check-label" for="chkLlamar">Quiero que me llamen</label>
 							<input class="form-check-input" type="checkbox" name="llamar" id="chkLlamar">
 						</div>
-
-						<select name="horarios" class="form-select mb-3">
+						<select name="inp_horarios" class="form-select mb-3">
 							<option selected>Horario de contacto</option>
 							<option value="1">Por la mañana</option>
 							<option value="2">Por la tarde</option>
 						</select>
-
 						<input class="btn btn-primary" type="submit" value="Enviar">
-
 						<input class="btn btn-primary" type="reset" value="Limpiar formulario">
-
 					</form>
-				</div>
-				<div class="">
-					<section class="row m-0 mt-2 mt-md-4 mb-2 mb-md-4">
-						<div class="col-12 p-2 p-md-4">
-							<p class="h4 text-center">Necesitás una respuesta más rápida?</p>
-							<p class="text-center">Utilizá alguno de los siguientes medios y te responderemos a la brevedad</p>
-							<div class="d-flex justify-content-around flex-wrap">
-								<div class="col-6 col-md-3 text-center">
-									<a href="https://wa.me/message/35QFFNT7WYYXH1" target="_blank" rel="noopener" class="display-4 mb-2 contactBtn fab fa-whatsapp-square hover-Scale"></a>
-									<p>Whatsapp</p>
+					<div class="modal fade" id="modalResponse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="staticBackdropLabel">Mensaje</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
-								<div class="col-6 col-md-3 text-center">
-									<a href="https://www.telegram.org/" target="_blank" rel="noopener" class="display-4 mb-2 contactBtn fab fa-telegram hover-Scale"></a>
-									<p>Telegram</p>
+								<div class="modal-body">
+									<p class="m-0" id="msgResponse"></p>
 								</div>
-								<div class="col-6 col-md-3 text-center">
-									<a href="https://www.instagram.com/" target="_blank" rel="noopener" class="display-4 mb-2 contactBtn fab fa-instagram-square hover-Scale"></a>
-									<p>Instagram</p>
-								</div>
-								<div class="col-6 col-md-3 text-center">
-									<a href="https://m.me/" target="_blank" rel="noopener" class="display-4 mb-2 contactBtn fab fa-facebook-messenger hover-Scale"></a>
-									<p>Messenger</p>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+			<section class="row m-0 mt-2 mt-md-4 mb-2 mb-md-4">
+				<div class="col-12 p-2 p-md-4">
+					<p class="h4 text-center">Necesitás una respuesta más rápida?</p>
+					<p class="text-center">Utilizá alguno de los siguientes medios y te responderemos a la brevedad</p>
+					<div class="d-flex justify-content-around flex-wrap">
+						<div class="col-6 col-md-3 text-center">
+							<a href="https://wa.me/message/35QFFNT7WYYXH1" target="_blank" rel="noopener" class="display-4 mb-2 contactBtn fab fa-whatsapp-square hover-Scale"></a>
+							<p>Whatsapp</p>
+						</div>
+						<div class="col-6 col-md-3 text-center">
+							<a href="https://www.telegram.org/" target="_blank" rel="noopener" class="display-4 mb-2 contactBtn fab fa-telegram hover-Scale"></a>
+							<p>Telegram</p>
+						</div>
+						<div class="col-6 col-md-3 text-center">
+							<a href="https://www.instagram.com/" target="_blank" rel="noopener" class="display-4 mb-2 contactBtn fab fa-instagram-square hover-Scale"></a>
+							<p>Instagram</p>
+						</div>
+						<div class="col-6 col-md-3 text-center">
+							<a href="https://m.me/" target="_blank" rel="noopener" class="display-4 mb-2 contactBtn fab fa-facebook-messenger hover-Scale"></a>
+							<p>Messenger</p>
+						</div>
+					</div>
 				</div>
 			</section>
 		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="modalOk" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				...
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Understood</button>
+				</div>
+			</div>
+			</div>
+		</div>
 	</main>
-
 	<!-- FOOTER -->
 	<footer class="container-fluid p-0">
 		<div class="d-flex flex-wrap bg-black text-white align-items-center text-center">
-			<div class="col-12 col-md-3">
+			<div class="col-12 col-md-3 pb-0 pt-2 p-md-0">
 				<div class="container w-75 p-0">
 					<ul class="nav flex-nowrap justify-content-around">
 						<li class="nav-item p-2">
@@ -147,29 +168,66 @@
 					</ul>
 				</div>
 			</div>
-			<div class="order-4 order-md-2 col-12 col-md-6">
+			<div class="order-4 order-md-2 col-12 col-md-6 p-2 p-md-0">
 				<span>Copyright © 2021 - 440 Estudio</span>
 			</div>
 			<div class="order-2 order-md-3 col-12 col-md-1">
 				<span>Av. Entre Ríos, C1033 CABA</span>
 			</div>
-			<div class="order-3 order-md-4 col-12 col-md-2">
+			<div class="order-3 order-md-4 col-12 col-md-2 pb-0 pt-2 p-md-0">
 				<div class="d-flex align-items-stretch">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.776181148702!2d-58.39479478427821!3d-34.60982078045801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac2cd859503%3A0x75cdafaaef2b946!2sCongreso%20de%20la%20Naci%C3%B3n%20Argentina!5e0!3m2!1ses-419!2sar!4v1636149999049!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 				</div>
 			</div>
 		</div>
 	</footer>
-	
 	<!-- Scripts -->
-
 	<!-- Boostrap Js -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<!-- WOW Js -->
 	<script src="../js/wow.min.js"></script>
 	<script>
 		new WOW().init();
+	</script>
+	<script>
+		var modalResponse = new bootstrap.Modal(document.getElementById('modalResponse'));
+		//https://web440estudio.herokuapp.com/
+		domain = window.location.hostname;
+		console.log(domain);
+
+		$(document).ready(function() {
+			$('#emailForm').submit(function(e) {
+				e.preventDefault();
+				if(domain != "web440estudio.herokuapp.com")
+				{
+					document.getElementById("msgResponse").innerHTML = "Formulario deshabilitado, para utilizarlo debes visitar la página a través de <a href='https://web440estudio.herokuapp.com' target='_blank' rel='noopener'>https://web440estudio.herokuapp.com</a>.";
+					modalResponse.show();
+				} else {
+					$.ajax({
+						type: "POST",
+						url: 'email.php',
+						data: $(this).serialize(),
+						success: function(response)
+						{
+							var jsonData = JSON.parse(response);
+							console.log(jsonData);
+							if (jsonData.enviado == "1")
+							{
+								document.getElementById("msgResponse").innerText = "Gracias! tu consulta fue enviada correctamente";
+								modalResponse.show();
+							}
+							else
+							{
+								document.getElementById("msgResponse").innerText ="Ups! parace que hubo un error al enviar tu consulta, vuelve a intentar más tarde o utiliza alguno de los medios que aparecen debajo";
+								modalResponse.show();
+							}
+					}
+					});
+				}
+			});
+		});
 	</script>
 </body>
 </html>
