@@ -15,6 +15,8 @@ _440Estudio es el nombre elegido para el proyecto final del curso "Desarrollo We
 + Corregidos algunos errores de indentación
 + Form de sección "Contacto" funcional (solo en heroku)
 + Corregido un error en el fondo degradado de la "heroImg" que hacía que no se visualice correctamente en algunos dispositivos.
++ OG tags agregadas en cada página
++ Clases y código en _main.scss reordenado y comentado para mejorar legibilidad
 
 > Tercera entrega proyecto final
  
