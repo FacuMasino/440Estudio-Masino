@@ -120,6 +120,10 @@ body {
       background-color: #000; }
     .btn-primary:focus, .btn-primary:focus:active {
       box-shadow: 0 0 0 0.2rem rgba(170, 170, 170, 0.5); }
+    .btn-primary:disabled {
+      background-color: #6c757d;
+      color: #fff;
+      border-color: #000; }
 
 .contactBtn {
   text-decoration: none;

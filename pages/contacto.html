@@ -85,8 +85,14 @@
 							<option value="1">Por la mañana</option>
 							<option value="2">Por la tarde</option>
 						</select>
-						<input class="btn btn-primary" type="submit" value="Enviar">
+						<input id="btnEnviar" class="btn btn-primary" type="submit" value="Enviar">
 						<input class="btn btn-primary" type="reset" value="Limpiar formulario">
+						<div id="spinner" class="text-center mt-2 mt-md-4 visually-hidden">
+							<div class="spinner-border" role="status">
+								<span class="visually-hidden">Enviando...</span>
+							</div>
+							<p>Enviando, espere...</p>
+						</div>
 					</form>
 					<div class="modal fade" id="modalResponse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 						<div class="modal-dialog modal-dialog-centered">
@@ -130,24 +136,6 @@
 					</div>
 				</div>
 			</section>
-		</div>
-		<!-- Modal -->
-		<div class="modal fade" id="modalOk" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-				<h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-				...
-				</div>
-				<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Understood</button>
-				</div>
-			</div>
-			</div>
 		</div>
 	</main>
 	<!-- FOOTER -->
@@ -205,9 +193,15 @@
 					document.getElementById("msgResponse").innerHTML = "Formulario deshabilitado, para utilizarlo debes visitar la página a través de <a href='https://web440estudio.herokuapp.com' target='_blank' rel='noopener'>https://web440estudio.herokuapp.com</a>.";
 					modalResponse.show();
 				} else {
+					// SPINNER
+					var spinner = document.getElementById('spinner');
+					spinner.classList.remove('visually-hidden');
+					// btnEnviar Disabled
+					document.getElementById('btnEnviar').disabled = true;
+					// ENVIAR EMAIL
 					$.ajax({
 						type: "POST",
-						url: 'email.php',
+						url: '/email.php',
 						data: $(this).serialize(),
 						success: function(response)
 						{
@@ -217,11 +211,15 @@
 							{
 								document.getElementById("msgResponse").innerText = "Gracias! tu consulta fue enviada correctamente";
 								modalResponse.show();
+								document.getElementById('btnEnviar').disabled = false;
+								spinner.classList.add('visually-hidden');
 							}
 							else
 							{
 								document.getElementById("msgResponse").innerText ="Ups! parace que hubo un error al enviar tu consulta, vuelve a intentar más tarde o utiliza alguno de los medios que aparecen debajo";
 								modalResponse.show();
+								document.getElementById('btnEnviar').disabled = false;
+								spinner.classList.add('visually-hidden');
 							}
 					}
 					});
