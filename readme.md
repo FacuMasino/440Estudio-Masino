@@ -14,6 +14,7 @@ _440Estudio es el nombre elegido para el proyecto final del curso "Desarrollo We
 + Agregado el atributo "rel=noopener" en links externos que podía exponer la página al bug "reverse tabnabbing"
 + Corregidos algunos errores de indentación
 + Form de sección "Contacto" funcional (solo en heroku)
++ Corregido un error en el fondo degradado de la "heroImg" que hacía que no se visualice correctamente en algunos dispositivos.
 
 > Tercera entrega proyecto final
  

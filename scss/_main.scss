@@ -38,7 +38,7 @@ body{
 }
 
 .heroTitulo{ /* Oscurece la imagen y resalta el texto */
-	background: radial-gradient(circle farthest-side at center center, rgba(0,0,0,0.5) 45%, rgba(0,255,0,0) 100%);
+	background: radial-gradient(circle farthest-side at center center, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 100%);
 	animation-duration: 2s;
 }
 
