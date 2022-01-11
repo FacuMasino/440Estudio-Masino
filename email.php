@@ -49,6 +49,7 @@ try {
 
     // COPIA DE CONFIRMACIÓN
 
+    $mail->clearAllRecipients(); // Borrar mails anteriores configurados como destino
     $mail->addAddress($_POST['inp_email'], $_POST['inp_nombre']);
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = $_POST['inp_nombre']. ' recibimos tu consulta - 440 Estudio';
