@@ -78,9 +78,9 @@
 						</div>
 						<div class="form-check text-start">
 							<label class="form-check-label" for="chkLlamar">Quiero que me llamen</label>
-							<input class="form-check-input" type="checkbox" name="llamar" id="chkLlamar">
+							<input class="form-check-input" type="checkbox" name="llamar" id="chkLlamar" disabled>
 						</div>
-						<select name="inp_horarios" class="form-select mb-3">
+						<select name="inp_horarios" class="form-select mb-3" disabled>
 							<option selected>Horario de contacto</option>
 							<option value="1">Por la mañana</option>
 							<option value="2">Por la tarde</option>
@@ -181,11 +181,28 @@
 	</script>
 	<script>
 		var modalResponse = new bootstrap.Modal(document.getElementById('modalResponse'));
-		//https://web440estudio.herokuapp.com/
 		domain = window.location.hostname;
-		console.log(domain);
+		console.log(domain); // debería ser https://web440estudio.herokuapp.com/
 
 		$(document).ready(function() {
+			
+			// Habilitar chkLlamar si se ingresó un teléfono
+			$('input[name=inp_telefono]').keyup(function(){
+				if (this.value.length > 9) {
+				$('#chkLlamar').prop('disabled', false)
+				} else {
+				$('#chkLlamar').prop('disabled', true)      
+				}
+			})
+
+			// Habilitar select horarios si chkLlamar está activado
+			$(function() {
+				$("#chkLlamar").click(function() {
+				$('[name="inp_horarios"]').attr("disabled", !this.checked);
+				});
+			});
+
+			// Envío de datos del form solo desde heroku
 			$('#emailForm').submit(function(e) {
 				e.preventDefault();
 				if(domain != "web440estudio.herokuapp.com")
@@ -193,12 +210,12 @@
 					document.getElementById("msgResponse").innerHTML = "Formulario deshabilitado, para utilizarlo debes visitar la página a través de <a href='https://web440estudio.herokuapp.com' target='_blank' rel='noopener'>https://web440estudio.herokuapp.com</a>.";
 					modalResponse.show();
 				} else {
-					// SPINNER
+					// Habilitar Spinner
 					var spinner = document.getElementById('spinner');
 					spinner.classList.remove('visually-hidden');
 					// btnEnviar Disabled
 					document.getElementById('btnEnviar').disabled = true;
-					// ENVIAR EMAIL
+					// Enviar email y devolver resultado
 					$.ajax({
 						type: "POST",
 						url: '/email.php',
@@ -207,19 +224,19 @@
 						{
 							var jsonData = JSON.parse(response);
 							console.log(jsonData);
-							if (jsonData.enviado == "1")
+							if (jsonData.enviado == "1") // Si todo sale bien
 							{
 								document.getElementById("msgResponse").innerText = "Gracias! tu consulta fue enviada correctamente";
 								modalResponse.show();
 								document.getElementById('btnEnviar').disabled = false;
-								spinner.classList.add('visually-hidden');
+								spinner.classList.add('visually-hidden'); // Ocultar Spinner
 							}
-							else
+							else // Si hay un error :(
 							{
 								document.getElementById("msgResponse").innerText ="Ups! parace que hubo un error al enviar tu consulta, vuelve a intentar más tarde o utiliza alguno de los medios que aparecen debajo";
 								modalResponse.show();
 								document.getElementById('btnEnviar').disabled = false;
-								spinner.classList.add('visually-hidden');
+								spinner.classList.add('visually-hidden'); // Ocultar Spinner
 							}
 					}
 					});

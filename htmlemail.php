@@ -16,7 +16,7 @@ if( isset($_POST['inp_horarios']))
 {
   if($_POST['inp_horarios'] == "1")
   {
-    $horario = "Por la ma&ntildeana";
+    $horario = "Por la mañana";
   } elseif ($_POST['inp_horarios'] == "2") {
     $horario = "Por la tarde";
   } else {
